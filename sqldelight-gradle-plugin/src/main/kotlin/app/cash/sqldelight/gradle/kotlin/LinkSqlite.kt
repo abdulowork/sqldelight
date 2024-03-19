@@ -10,6 +10,6 @@ internal fun Project.linkSqlite() {
     .filterIsInstance<KotlinNativeTarget>()
     .flatMap { it.binaries }
     .forEach { compilationUnit ->
-      compilationUnit.linkerOpts("-lsqlite3")
+//      compilationUnit.linkerOpts("-lsqlite3")
     }
 }

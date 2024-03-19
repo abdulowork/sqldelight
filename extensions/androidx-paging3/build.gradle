@@ -54,14 +54,14 @@ kotlin {
     }
   }
 
-  configure([targets.iosX64, targets.iosArm64, targets.iosSimulatorArm64]) {
-    binaries.configureEach {
-      // we only need to link sqlite for the test binaries
-      if (outputKind == NativeOutputKind.TEST) {
-        linkerOpts += ["-lsqlite3"]
-      }
-    }
-  }
+//  configure([targets.iosX64, targets.iosArm64, targets.iosSimulatorArm64]) {
+//    binaries.configureEach {
+//      // we only need to link sqlite for the test binaries
+//      if (outputKind == NativeOutputKind.TEST) {
+//        linkerOpts += ["-lsqlite3"]
+//      }
+//    }
+//  }
 
   configure([targets.linuxX64]) {
     compilations.configureEach {
