@@ -1,4 +1,3 @@
-import org.gradle.kotlin.dsl.support.uppercaseFirstChar
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 import org.jetbrains.kotlin.gradle.plugin.mpp.NativeBuildType
 import org.jetbrains.kotlin.konan.target.HostManager
@@ -162,7 +161,7 @@ fun testExternalLinkage(
         baseName = "sqliteDriver"
         isStatic = true
 
-        val testTask = tasks.register("testExternalLinkage${target.name.uppercaseFirstChar()}") {
+        val testTask = tasks.register("testExternalLinkage${target.name}") {
             val sourceFilesDirectory = layout.projectDirectory.dir("externalLinkageSources")
             inputs.files(framework.linkTask, sourceFilesDirectory)
             val output = layout.buildDirectory.file("testExternalLinkage/${target.name}")

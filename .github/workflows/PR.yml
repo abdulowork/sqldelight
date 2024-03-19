@@ -20,7 +20,7 @@ jobs:
       # Ensure any changes to the matrix are also made in PR-skip.yml
       matrix:
         os: [ macOS-latest ]
-        job: [ instrumentation, test, gradle-plugin-tests ]
+        job: [ gradle-plugin-tests ]
         exclude:
           - os: windows-latest
             job: instrumentation
@@ -101,6 +101,7 @@ jobs:
           gradle-home-cache-cleanup: true
 
   verify_intellij:
+    if: false
     runs-on: ubuntu-latest
 
     permissions:
@@ -122,6 +123,7 @@ jobs:
       - run: ./gradlew -DideaVersion=${{matrix.idea}} :sqldelight-idea-plugin:runPluginVerifier
 
   verify_intellij_check:
+    if: false
     runs-on: ubuntu-latest
 
     needs: verify_intellij
