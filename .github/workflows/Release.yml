@@ -1,11 +1,6 @@
 name: Publish a release
 
-on:
-  push:
-    branches:
-      - master
-    tags:
-      - '*'
+on: workflow_dispatch
 
 concurrency:
   group: "release"
