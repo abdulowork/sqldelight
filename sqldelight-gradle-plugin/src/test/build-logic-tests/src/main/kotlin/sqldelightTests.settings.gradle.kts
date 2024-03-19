@@ -28,3 +28,5 @@ dependencyResolutionManagement {
     google()
   }
 }
+
+includeBuild("../../../../sqliter-copy")
