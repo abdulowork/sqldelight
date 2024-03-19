@@ -24,7 +24,7 @@ plugins {
 spotless {
   kotlin {
     target "**/*.kt"
-    targetExclude "**/gen/**/*.*", "**/generated/**/*.*", "sqldelight-compiler/integration-tests/src/test/kotlin/com/example/**/*.*", "sqldelight-compiler/src/test/migration-interface-fixtures/**/*.*", "sqldelight-gradle-plugin/src/test/build-logic-tests/build/**/*.*"
+    targetExclude "sqliter-copy/**/*", "**/gen/**/*.*", "**/generated/**/*.*", "sqldelight-compiler/integration-tests/src/test/kotlin/com/example/**/*.*", "sqldelight-compiler/src/test/migration-interface-fixtures/**/*.*", "sqldelight-gradle-plugin/src/test/build-logic-tests/build/**/*.*"
     ktlint(libs.versions.ktlint.get()).editorConfigOverride([
       "ktlint_standard_discouraged-comment-location": "disabled",
       "ktlint_standard_package-name": "disabled",
