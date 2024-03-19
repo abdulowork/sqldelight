@@ -63,3 +63,5 @@ include ':sqldelight-idea-plugin'
 include ':sqlite-migrations'
 include ':sqlite-migrations:environment'
 include ':test-util'
+
+includeBuild("sqliter-copy")
